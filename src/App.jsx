@@ -33,6 +33,7 @@ const App = () => {
     fetchData()
   }
 
+
   if (isLoading) return <Loader />
 
   return (
