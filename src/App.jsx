@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { ToursList } from './cmps/ToursList'
 
 const url = 'https://course-api.com/react-tours-project'
 
@@ -10,7 +11,7 @@ const App = () => {
       try {
         const data = await fetch(url)
         const tours = await data.json()
-        console.log(tours)
+        setTours(tours)
       } catch (error) {
         console.log('error:', error)
       }
@@ -19,9 +20,11 @@ const App = () => {
   }, [])
 
   return (
-    <>
-
-    </>
+    <main>
+      <h2 className='title'>Our Tours</h2>
+      <div className='title-underline'></div>
+      <ToursList tours={tours} />
+    </main>
   )
 }
 export default App
