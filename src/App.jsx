@@ -20,7 +20,8 @@ const App = () => {
   }, [])
 
   function onRemoveTour(tourId) {
-    console.log(tourId)
+    const newFilteredTours = tours.filter(tour => tour.id !== tourId)
+    setTours(newFilteredTours)
   }
 
   if (!tours) return <div>Loading...</div>
