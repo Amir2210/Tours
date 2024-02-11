@@ -29,11 +29,16 @@ The project started with setting up a React environment and fetching data from t
 * Implement pagination for better handling of large datasets.
 * Enhance error handling for failed API requests.
 * Improve styling for a more visually appealing user interface.
-  
-🚦 Running the Project:
 
-Clone the repository from GitHub.
-Navigate to the project directory in your terminal.
-Run npm install to install dependencies.
-Run npm start to start the development server.
-Open your browser and visit http://localhost:3000 to view the application.
+🚦 Running the Project: To run the project locally:
+
+1. Clone the repository from GitHub.
+
+2. Navigate to the project directory in your terminal.
+
+3. Run npm install to install dependencies.
+
+4. Run npm run dev to start the development server.
+
+   
+![ללא שם](https://github.com/Amir2210/Tours/assets/107459404/9e77045f-515c-4c25-a999-9a61248de6dc)
