@@ -18,12 +18,18 @@ const App = () => {
     }
     fetchData()
   }, [])
+
+  function onRemoveTour(tourId) {
+    console.log(tourId)
+  }
+
   if (!tours) return <div>Loading...</div>
+
   return (
     <main>
       <h2 className='title'>Our Tours</h2>
       <div className='title-underline'></div>
-      <ToursList tours={tours} />
+      <ToursList tours={tours} onRemoveTour={onRemoveTour} />
     </main>
   )
 }

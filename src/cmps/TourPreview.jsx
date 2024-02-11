@@ -1,4 +1,4 @@
-export function TourPreview({ tour }) {
+export function TourPreview({ tour, onRemoveTour }) {
   const { id, name, info, image, price } = tour
   return (
     <article className='single-tour'>
@@ -8,7 +8,7 @@ export function TourPreview({ tour }) {
         <h5>{name}</h5>
         <p>{info}</p>
         <button className='info-btn'>read More</button>
-        <button className='delete-btn btn-block btn'>not interested</button>
+        <button onClick={() => onRemoveTour(id)} className='delete-btn btn-block btn'>not interested</button>
       </div>
     </article>
   )
