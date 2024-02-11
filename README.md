@@ -1,39 +1,35 @@
-## Figma URL
+🎋 Intro:
+This project is a React web application that fetches tour data from an external API and displays it to the user. Users can view a list of available tours, remove tours they're not interested in, and refresh the list to see the latest data.
 
-[Tours](https://www.figma.com/file/OnLoM3AzBFaHzSc2iolJS0/Tours?node-id=0%3A1&t=wiRXOlTLN5ehekYI-1)
+📦 Tech Stack:
 
-## Steps
+React
+JavaScript (ES6+)
+HTML
+CSS
+👩🏽‍🍳 Features:
 
-#### Setup
+Fetches tour data from an external API.
+Displays a list of tours with information such as name, image, price, and description.
+Allows users to remove tours they're not interested in.
+Provides a "refresh" button to update the list with the latest data from the API.
+💭 Process:
+The project started with setting up a React environment and fetching data from the API. I focused on designing components for displaying tours and handling user interactions. While implementing features, I encountered challenges such as managing loading states and updating tour lists dynamically. Through experimentation and research, I resolved these issues and gained a deeper understanding of React's useEffect hook and state management. Overall, the project provided valuable insights into building responsive web applications with React.
 
-First create - three components (Tours, Tour, and Loading), you can create three separate files in your project directory: Tours.jsx, Tour.jsx, and Loading.jsx. In each of these files, you will define a React functional component that returns JSX code for rendering the respective component.
+📚 Learnings:
 
-#### Fetch Tours
+Enhanced understanding of React hooks, including useState and useEffect.
+Improved knowledge of asynchronous JavaScript and handling API requests.
+Practiced building reusable React components for displaying data.
+✨ Improvement:
 
-The Tours component will be responsible for rendering a list of Tour components. In App.jsx, you will fetch the tours data from a URL using the fetch API. Before the data is loaded, you should show a loading spinner or message, which can be implemented using the Loading component.
+Implement pagination for better handling of large datasets.
+Enhance error handling for failed API requests.
+Improve styling for a more visually appealing user interface.
+🚦 Running the Project:
 
-#### Render Tours
-
-Once the data is loaded, you can set the state of your component to store the tours data. You can then map over the tours array and render a Tour component for each tour. Each Tour component will receive the tour data as props, including the tour's id, image, info, name, and price.
-
-#### Remove Tour
-
-To implement the "remove tour" functionality, you can add a button to each Tour component that, when clicked, removes the tour from the list of tours. You can achieve this by updating the state of the Tours component to remove the tour from the tours array.
-
-#### Read More
-
-To implement the "read more" functionality, you can add a button to each Tour component that, when clicked, expands the description of the tour. You can achieve this by updating the state of the Tour component to toggle a "read more" flag, and conditionally rendering the full description based on the flag.
-
-#### Re-fetch Tours
-
-Finally, you can implement a "re-fetch" functionality by adding a button or other user interface element that, when clicked, re-fetches the tours data from the URL and updates the state of the Tours component. You may also want to add a loading state again during the re-fetching process.
-
-Overall, the flow of the application should look something like this:
-
-- App.jsx fetches tours data from a URL and sets the state of the Tours component to store the data.
-- The Tours component maps over the tours array and renders a Tour component for each tour.
-- Each Tour component has a "remove tour" button and a "read more" button.When the "remove tour" button is clicked, the Tours component updates its state to remove the tour from the tours array.
-
-- When the "read more" button is clicked, the Tour component updates its state to toggle a "read more" flag and conditionally renders the full description.
-
-- When the "re-fetch" button is clicked, the Tours component re-fetches the tours data from the URL and updates its state.
+Clone the repository from GitHub.
+Navigate to the project directory in your terminal.
+Run npm install to install dependencies.
+Run npm start to start the development server.
+Open your browser and visit http://localhost:3000 to view the application.
