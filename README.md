@@ -32,13 +32,13 @@ The project started with setting up a React environment and fetching data from t
 
 🚦 Running the Project: To run the project locally:
 
-1. Clone the repository from GitHub.
-
+1. Clone the repository from GitHub.   
 2. Navigate to the project directory in your terminal.
-
 3. Run npm install to install dependencies.
-
 4. Run npm run dev to start the development server.
+5. Open your browser and navigate to http://localhost:5173 to view the application.
+
+
 
    
 ![ללא שם](https://github.com/Amir2210/Tours/assets/107459404/9e77045f-515c-4c25-a999-9a61248de6dc)
