@@ -18,7 +18,7 @@ const App = () => {
     }
     fetchData()
   }, [])
-
+  if (!tours) return <div>Loading...</div>
   return (
     <main>
       <h2 className='title'>Our Tours</h2>
