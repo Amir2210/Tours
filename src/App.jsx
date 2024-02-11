@@ -6,17 +6,20 @@ const url = 'https://course-api.com/react-tours-project'
 
 const App = () => {
   const [tours, setTours] = useState([])
-
+  const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     fetchData()
   }, [])
 
   async function fetchData() {
     try {
+      setIsLoading(true)
       const data = await fetch(url)
       const tours = await data.json()
       setTours(tours)
+      setIsLoading(false)
     } catch (error) {
+      setIsLoading(true)
       console.log('error:', error)
     }
   }
@@ -30,7 +33,7 @@ const App = () => {
     fetchData()
   }
 
-  if (!tours) return <Loader />
+  if (isLoading) return <Loader />
 
   return (
     <main>
