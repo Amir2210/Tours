@@ -4,7 +4,7 @@ import { ToursList } from './cmps/ToursList'
 const url = 'https://course-api.com/react-tours-project'
 
 const App = () => {
-  const [tours, setTours] = useState(null)
+  const [tours, setTours] = useState([])
 
   useEffect(() => {
     async function fetchData() {
@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <main>
-      <h2 className='title'>Our Tours</h2>
+      <h2 className='title'>{tours.length ? 'Our Tours' : 'No Tours Left'}</h2>
       <div className='title-underline'></div>
       <ToursList tours={tours} onRemoveTour={onRemoveTour} />
     </main>
